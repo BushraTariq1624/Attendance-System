@@ -9,7 +9,7 @@ const app = express();
 
 app.use(
 	cors({
-		origin: ['http://localhost:5173','https://authentication-frontend-psi.vercel.app'],
+		origin: ['http://localhost:5173','https://attendance-system-flax.vercel.app'],
 		methods: ['GET', 'PUT', 'POST', 'DELETE'],
 		credentials: true,
 	}),
