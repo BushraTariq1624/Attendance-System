@@ -51,30 +51,31 @@ const Hero = () => {
 							<div className="lg:w-2/3 flex flex-col sm:flex-row sm:items-center items-start mx-auto">
 								<h1 className="flex-grow sm:pr-16 text-2xl font-medium title-font text-gray-900">
 									WELCOME TO OUR ATTENDANCE SYSTEM <br />
-									{user?"":"Go To Profile And Fill Info To Get Further Details"}
 								</h1>
 							</div>
-							<div>
-								<p className='text-2xl'>{user ? `Hello, ${user.name}` : ""}</p>
-							</div>
-							<div>
-								<p className='text-2xl'>{user ? ` ${user.email}` : ""}</p>
-							</div>
-							<div>
-								<p className='text-2xl'>{user ? `${user.gender}` : ""}</p>
-							</div>
-							<div>
-								<p className='text-2xl'>{user ? "Salary:50000" : ""}</p>
-							</div>
-							<div>
-								<p className='text-2xl'>{user ? "No leave Allowed" : ""}</p>
-							</div>
-							<div>
-								<p className='text-2xl'>{user ? `YOUR CHECK-IN TIME:  ${checkInTime || 'Not checked in yet'}` : ""}</p>
-							</div>
-							<div>
-								<p className='text-2xl'>{user ? `YOUR CHECK-OUT TIME:  ${checkOutTime || 'Not checked out yet'}` : ""}</p>
-							</div>
+							{user ? (<div>
+								<div>
+									<p className='text-2xl'>Hello, {user.name}</p>
+								</div>
+								<div>
+									<p className='text-2xl'>{user.email}</p>
+								</div>
+								<div>
+									<p className='text-2xl'>{user.gender}</p>
+								</div>
+								<div>
+									<p className='text-2xl'>Salary:50000 </p>
+								</div>
+								<div>
+									<p className='text-2xl'>No leave Allowed</p>
+								</div>
+								<div>
+									<p className='text-2xl'>YOUR CHECK-IN TIME:  {checkInTime || 'Not checked in yet'}</p>
+								</div>
+								<div>
+									<p className='text-2xl'>YOUR CHECK-OUT TIME:  {checkOutTime || 'Not checked out yet'}</p>
+								</div>
+							</div>) : "Go To Profile And Fill Info To Get Further Details"}
 						</div>
 					</section >
 				) : (
